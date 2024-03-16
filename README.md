@@ -29,7 +29,7 @@ hello_world_1.py, writing both output and any errors into the file /var/log/hell
 
 2>&1 - This redirects standard error (stderr) to the same place where standard output (stdout) is going. 
 Effectively, this means that both the output and any error messages from the script will be written to the 
-file /var/log/hello_world_1.log.
+file /app/log/hello_world_1.log.
 
 ## Cron Commands
 `crontab -l` - shows current cron jobs
