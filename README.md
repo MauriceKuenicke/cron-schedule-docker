@@ -22,7 +22,7 @@ docker run cron-scheduled-python
 
 Example:
 ```
-* * * * * cd /app/scripts && python3 hello_world_1.py >> /var/log/hello_world_1.log 2>&1
+* * * * * cd /app/scripts && python3 hello_world_1.py >> /app/log/hello_world_1.log 2>&1
 ```
 "Every minute, change to the /app/scripts directory and, if successful, run the Python script
 hello_world_1.py, writing both output and any errors into the file /var/log/hello_world_1.log"
