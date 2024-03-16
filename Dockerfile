@@ -1,4 +1,4 @@
-# Use python:3-alpine as the base image
+# Use python:3 as the base image
 FROM python:3
 
 # Set Python buffer to make Docker logs continuous
@@ -11,6 +11,7 @@ WORKDIR /app
 RUN apt-get update && apt-get -y install cron
 COPY requirements.txt .
 RUN pip install -r requirements.txt
+RUN apt install python3-dotenv
 
 # Copy everything into the container
 COPY . .
@@ -25,4 +26,6 @@ RUN touch /app/log/is_alive.log
 RUN touch /app/log/hello_world_1.log
 RUN touch /app/log/hello_world_2.log
 
-CMD cron && tail -f /app/log/*.log
+# We need to save all environment variables to /etc/environment since cron doesn't load
+# any Docker environment variables by default
+CMD /bin/bash -c "printenv >> /etc/environment && cron && tail -f /app/log/*.log"

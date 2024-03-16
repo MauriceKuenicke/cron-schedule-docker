@@ -5,7 +5,7 @@ Docker commands
 docker build -t cron-scheduled-python .
 ```
 ```sh
-docker run cron-scheduled-python
+docker run --env-file=.env cron-scheduled-python
 ```
 
 ## Cron Structure
