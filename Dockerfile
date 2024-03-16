@@ -4,6 +4,9 @@ FROM python:3
 # Set Python buffer to make Docker logs continuous
 ENV PYTHONUNBUFFERED=1
 
+# Set container timezone
+ENV TZ="Europe/Berlin"
+
 # Set the working directory
 WORKDIR /app
 
