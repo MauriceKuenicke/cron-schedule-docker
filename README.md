@@ -2,10 +2,10 @@
 
 Docker commands
 ```sh
-docker build -t cron-sheduled-python .
+docker build -t cron-scheduled-python .
 ```
 ```sh
-docker run cron-sheduled-python
+docker run cron-scheduled-python
 ```
 
 ## Cron Structure
