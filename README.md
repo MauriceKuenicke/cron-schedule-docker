@@ -22,9 +22,9 @@ docker run cron-scheduled-python
 
 Example:
 ```
-* * * * * cd /app/ && python3 hello_world_1.py >> /var/log/hello_world_1.log 2>&1
+* * * * * cd /app/scripts && python3 hello_world_1.py >> /var/log/hello_world_1.log 2>&1
 ```
-"Every minute, change to the /app/ directory and, if successful, run the Python script
+"Every minute, change to the /app/scripts directory and, if successful, run the Python script
 hello_world_1.py, writing both output and any errors into the file /var/log/hello_world_1.log"
 
 2>&1 - This redirects standard error (stderr) to the same place where standard output (stdout) is going. 
