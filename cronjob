@@ -1,0 +1,3 @@
+* * * * * cd /app/scripts && python3 is_alive.py >> /app/log/is_alive.log 2>&1
+*/5 * * * * cd /app/scripts && python3 hello_world_1.py >> /app/log/hello_world_1.log 2>&1
+*/5 * * * * cd /app/scripts && python3 hello_world_2.py >> /app/log/hello_world_2.log 2>&1
